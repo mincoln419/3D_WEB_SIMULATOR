@@ -1,0 +1,200 @@
+:root {
+  font-family: system-ui, -apple-system, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  line-height: 1.45;
+  color: #1a202c;
+  background: #edf2f7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.canvas-wrap {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+}
+
+.hud-panel {
+  width: min(360px, 38vw);
+  background: rgba(255, 255, 255, 0.94);
+  border-left: 1px solid #e2e8f0;
+  padding: 1rem 1.1rem 1.5rem;
+  overflow-y: auto;
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.06);
+}
+
+.hud-title {
+  margin: 0 0 1rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.hud-section {
+  margin-bottom: 1.25rem;
+}
+
+.hud-section h2 {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4a5568;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.hud-hint {
+  margin: 0.35rem 0 0;
+  font-size: 0.75rem;
+  color: #718096;
+}
+
+.hud-file {
+  width: 100%;
+  font-size: 0.8rem;
+}
+
+.chore-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.chore-list li {
+  margin-bottom: 0.35rem;
+  font-size: 0.88rem;
+}
+
+.chore-list label {
+  display: flex;
+  gap: 0.45rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hud-warn {
+  margin-top: 0.5rem;
+  font-size: 0.78rem;
+  color: #c05621;
+}
+
+.hud-clock .clock {
+  font-size: 2rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.hud-clock .phase {
+  font-size: 0.85rem;
+  color: #718096;
+  margin-bottom: 0.65rem;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.btn {
+  border: 1px solid #cbd5e0;
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: #4299e1;
+  border-color: #3182ce;
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn.active {
+  background: #ebf8ff;
+  border-color: #4299e1;
+  color: #2b6cb0;
+}
+
+.speed-group {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.day-bar,
+.item-bar {
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.day-bar-fill,
+.item-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #63b3ed, #4299e1);
+  border-radius: 999px;
+  transition: width 0.2s ease;
+}
+
+.schedule-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 40vh;
+  overflow-y: auto;
+}
+
+.schedule-list li {
+  padding: 0.45rem 0;
+  border-bottom: 1px solid #edf2f7;
+  font-size: 0.82rem;
+}
+
+.schedule-list li.active {
+  background: #ebf8ff;
+  margin: 0 -0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 6px;
+}
+
+.schedule-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin-bottom: 0.25rem;
+}
+
+.schedule-row .time {
+  color: #718096;
+  font-variant-numeric: tabular-nums;
+}
+
+.badge {
+  margin-left: 0.35rem;
+  font-size: 0.68rem;
+  background: #fef3c7;
+  color: #92400e;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+}
